@@ -32,8 +32,7 @@ void main() {
 
   // even.forEach((num) => evenTotal = evenTotal + num);
   // odd.forEach((num) => oddTotal = oddTotal + num);
-
-  // print({'evenTotal': evenTotal, 'oddTotal': oddTotal});
+ // print({'evenTotal': evenTota7l, 'oddTotal': oddTotal});
 
   // List<String> players = ['Ronaldo', 'Messi', 'Neymar', 'Hazard'];
 
@@ -41,7 +40,21 @@ void main() {
   //   print(player);
   // }
 
-  List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
+  // List<String> footballplayers=['Ronaldo','Messi','Neymar','Hazard'];
 
-  footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+  // footballplayers.asMap().forEach((index, value) => print("$value index is $index"));
+
+  var players  = [
+    {'name': 'Neymar', 'goal': 10},
+    {'name': 'mesi', 'goal': 20},
+    {'name': 'Ronaldo', 'goal': 30},
+  ];
+  var goals = [];
+  for (var i = 0; i < players.length; i++) {
+    var player = players[i];
+    goals.add(player['goal']);
+  };
+  var totalGoal = goals.reduce((i, j) => i + j);
+  
+  print(totalGoal);
 }
